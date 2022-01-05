@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: #15172B;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: darkblue;
+}
+
+
+#mobile-menu{
+    transform: translateY(-300px);
+    animation: slideDown .8s ease-in-out forwards .5s;
+}
+
+.tech {
+    margin-top: -60px;
+}
+
+.tech-inline {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+@media screen and (max-width: 480px) {
+    #css #css2{
+        width: 80px;
+        height: 80px;
+    }
+
+    .css-img .css-img2{
+        width: 50px;
+        height: 50px;
+    }
+  }
+
+.tech-float {
+    position: relative;
+}
+
+#css {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transition: 2s;
+
+}
+
+#css:hover {
+    width: 300px;
+}
+
+.hide{
+    display: none;
+    font-size: 13px;
+}
+
+#css:hover .hide{
+    display: block;
+    color: #ff6600;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.css-img{
+    height: 63px;
+    width: 63px;
+    justify-content: center;
+}
+
+#css2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.css-img2{
+    height: 63px;
+    width: 63px;
+    justify-content: center;
+}
+
+
+.tech-float .slider {
+    position: absolute;
+    overflow: hidden;
+    animation: slider 26s infinite;
+}
+
+.tech-float .slider .slide {
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+.tech-float .slider .slide {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(500px) scale(.2);
+    }
+    100% {
+      transform: translateX(0px) scale(1);
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes expand {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes slider {
+    0%, 25%, 100%{left: 0}
+
+    30%, 55%{left: -100%}
+
+    60%, 85%{left: -200%}
+}
+
+
